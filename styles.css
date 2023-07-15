@@ -1,0 +1,299 @@
+:root {
+	--color: #1992d4
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto";
+}
+
+/* div {
+	border: 1px solid black;
+} */
+
+
+.container {
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 0.7fr 4fr;
+	height: 100%;
+}
+
+/* .container div {
+	font-size: 32px;
+	font-weight: bold;
+	color: white;
+} */
+
+/* .header {
+	grid-column: 2 / 3;
+} */
+
+.sidebar {
+	background: var(--color);
+	grid-row: 1 / 3;
+	display: grid;
+	grid-template-rows: repeat(autofit, minmax(100px, 1fr));
+	font-size: 32px;
+	font-weight: bold;
+	color: white;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+	
+}
+
+.top, .bottom {
+	flex: 1;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-rows: 0.87fr 4fr 4fr;
+}
+
+.dashboard {
+	display: flex;
+	align-items: center;
+}
+
+.logo, .text {
+	display: flex;
+}
+
+.logo {
+	width: 50px;
+}
+
+.left {
+	padding-left: 10px;
+}
+
+.first {
+	display: grid;
+	grid-template-rows: repeat(autofit, 1fr);
+}
+
+.textOne {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.contentOne, .contentTwo {
+	display: flex;
+	padding: 10px;
+	padding-top: 20px;
+	align-items: center;
+}
+
+.logoOne {
+	width: 30px;
+	padding-right: 10px;
+}
+
+.top {
+	display: grid;
+	grid-template-columns: 3fr 0.8fr 1.2fr;
+}
+
+.search {
+	display: flex;
+	padding-left: 20px;
+}
+
+.searchBar {
+	background-color: #e2e8f0;
+	opacity: 50%;
+	width: 100%;
+	height: 50%;
+	align-self: center;
+	border-radius: 20px;
+}
+
+.notification {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.account {
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+}
+
+.username {
+	color: black;
+	font-size: 30px;
+	font-weight: lighter;
+}
+
+.bottom {
+	display: grid;
+	grid-template-columns: 3fr 0.5fr 0.5fr 0.5fr;
+}
+
+.user {
+	display: flex;
+	padding-left: 10px;
+	align-items: center;
+}
+
+.new, .upload, .share {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button {
+	width: 75%;
+	height: 50%;
+	background-color: var(--color);
+	border-radius: 20px;
+	padding-top: 10px;
+	font-size: 1px;
+	font-size: 20px;
+	color: white;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	background-color: #e2e8f0;
+}
+
+.projects {
+	grid-row: 1 / 3;
+}
+
+.projectsHead {
+	text-align: left;
+	font-size: 20px;
+	font-weight: 900;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.announcements {
+	grid-row: 1 / 2;
+	grid-column: 2 / 3;
+}
+
+.trending {
+	grid-row: 2 / 3;
+	grid-column: 2 / 3;
+}
+
+.projectsWrapper {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(autofit, 1fr);
+	justify-content: center;
+	gap: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.card {
+	display: flex;
+	flex-flow: column wrap;
+	border-radius: 15px;
+	background-color: white;
+}
+
+.cardContent {
+	flex: 3;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-start;
+	padding: 20px;
+}
+
+.cardButtons {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px;
+	padding-right: 20px;
+	gap: 20px;
+}
+
+.cardHeader {
+	font-size: 20px;
+	padding-top: 10px;
+	font-weight: 900;
+}
+
+.cardText {
+	text-align: left;
+	padding-top: 5px;
+	font-size: 16px;
+	color: #747474;
+}
+
+.cardIcons {
+	width: 20px;
+}
+
+.announcements, .trending {
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 10px;
+	font-size: 12px;
+	text-align: left;
+}
+
+.announcements > .card, .trending > .card {
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	height: 100%;
+}
+
+.announcementsContent, .trendingContent {
+	flex: 1;
+	display: flex;
+	padding: 10px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+.announcementsContent {
+	flex-flow: column nowrap;
+	align-items: flex-start;
+}
+.contentHeader, .trendingHeaders {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.announcementsText, .trendingText {
+	text-align: left;
+	color: #747474;
+	font-size: 16px;
+}
+
+.trendingContent {
+	width: 86%;
+	padding-bottom: 10px;
+}
+
+.userIcon {
+	flex: 1;
+}
+
+.trendingWrapper {
+	flex: 2;
+	padding-left: 10px;
+}
+
+.trendingIcons {
+	width: 20px;
+}
